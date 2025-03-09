@@ -10,7 +10,7 @@ def home():
 @app.route("/next-10-dates", methods=["GET"])
 def next_10_dates():
     today = datetime.utcnow()
-    dates = [(today + timedelta(days=i)).strftime("%d-%m-%Y") for i in range(10)]
+    dates = [(today + timedelta(days=i)).strftime("%d-%m-%Y") for i in range(20)]
     return jsonify({"dates": dates})  # Always return JSON object
 
 if __name__ == "__main__":
